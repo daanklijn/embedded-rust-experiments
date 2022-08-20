@@ -7,7 +7,7 @@ the interaction with the hardware of this board a bit simpler, I make use of the
 Each of the experiments can be found in their own dedicated file / folder. In order to run a specific one, make sure that it is being called
 in `main.rs` and comment the other ones out.
 
-After connecting to the stm32 using a StLink, the project can be ran using `cargo build` and `cargo run`.
+After connecting to the stm32 using a StLink, the project can be run using `cargo build` and `cargo run`.
 The `run` command will automaticaly fires up GDB and sets up the connection to OpenOCD.
 
 Below you can find a short description of the experiments and the breadboard setup I used.
