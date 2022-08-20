@@ -5,10 +5,10 @@ pub(crate)
 extern crate panic_halt;
 use cortex_m;
 use embedded_hal::prelude::_embedded_hal_blocking_delay_DelayMs;
-use stm32f4xx_hal::{self, stm32, prelude::*};
+use stm32f4xx_hal::{pac::Peripherals, prelude::_stm32f4xx_hal_gpio_GpioExt, rcc::RccExt, prelude::_fugit_RateExtU32, time::MegaHertz, timer::{Delay, SysDelay, SysTimerExt}};
 
 pub fn start() -> ! {
-    let peripherals = stm32::Peripherals::take().unwrap();
+    let peripherals = Peripherals::take().unwrap();
 
     let core_peripherals = cortex_m::peripheral::Peripherals::take().unwrap();
 
@@ -24,30 +24,30 @@ pub fn start() -> ! {
     // Reset and clock control
     let rcc = peripherals.RCC.constrain();
 
-    let clocks = rcc.cfgr.sysclk(100.mhz()).freeze();
+    let clocks = rcc.cfgr.sysclk(100.MHz()).freeze();
 
     // System Timer
-    let mut delay = stm32f4xx_hal::delay::Delay::new(core_peripherals.SYST, clocks);
+    let mut delay = core_peripherals.SYST.delay(&clocks);
 
     let mut delay_ms: u32 = 200;
     let mut i = 1;
 
 
     loop {
-        led1.set_high().unwrap();
-        led2.set_high().unwrap();
-        led3.set_high().unwrap();
-        led4.set_high().unwrap();
+        led1.set_high();
+        led2.set_high();
+        led3.set_high();
+        led4.set_high();
         match i{
-            1=>led1.set_low().unwrap(),
-            2=>led2.set_low().unwrap(),
-            3=>led3.set_low().unwrap(),
-            4=>led4.set_low().unwrap(),
+            1=>led1.set_low(),
+            2=>led2.set_low(),
+            3=>led3.set_low(),
+            4=>led4.set_low(),
             _=>i=0
         }
         i+=1;
 
         delay.delay_ms(delay_ms);
-        hprintln!("Blink!").unwrap();
+        hprintln!("Blink!");
     }
 }
