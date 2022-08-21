@@ -12,11 +12,19 @@ The `run` command will automaticaly fires up GDB and sets up the connection to O
 
 Below you can find a short description of the experiments and the breadboard setup I used.
 
-## Blink
+## blink
 
 This experiment blinks a number of LED's one by one.
 
 <img src="https://user-images.githubusercontent.com/27863547/185762635-9c2205dc-2eb5-4258-aac9-fd37eaa0d408.JPG" width="400px">
 
 
+## adc_read
 
+Reading the number of mV on pin 5 and printing it to the console.
+
+## blink_w_speed_control
+
+Same as the `blink` experiment, but now the speed at which the LED's blink can be adjusted using a potentiometer.
+
+<img src="https://user-images.githubusercontent.com/27863547/185765522-341febbe-f6ad-4c7d-b6b7-da52c2500e26.JPG" width="400px">
