@@ -28,3 +28,11 @@ Reading the number of mV on pin 5 and printing it to the console.
 Same as the `blink` experiment, but now the speed at which the LED's blink can be adjusted using a potentiometer.
 
 <img src="https://user-images.githubusercontent.com/27863547/185765522-341febbe-f6ad-4c7d-b6b7-da52c2500e26.JPG" width="400px">
+
+
+## spi_dac
+
+Outputing a saw wave using the MCP4922 DAC. Make sure that the VRef is wired, otherwise the output will contain noise.
+
+<img src="https://user-images.githubusercontent.com/27863547/187078372-f6e49b43-a8d2-434f-b05a-676f9187d384.JPG" width="400px">
+
