@@ -16,7 +16,7 @@ pub fn start() -> ! {
     let gpioc = peripherals.GPIOC.split();
     let gpioa = peripherals.GPIOA.split();
 
-    let mut led1 = gpioc.pc15.into_push_pull_output();
+    let mut led1 = gpioc.pc13.into_open_drain_output();
     let mut led2 = gpioa.pa1.into_push_pull_output();
     let mut led3 = gpioa.pa4.into_push_pull_output();
     let mut led4 = gpioa.pa7.into_push_pull_output();
