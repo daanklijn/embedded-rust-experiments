@@ -36,3 +36,5 @@ Outputing a saw wave using the MCP4922 DAC. Make sure that the VRef is wired, ot
 
 <img src="https://user-images.githubusercontent.com/27863547/187078372-f6e49b43-a8d2-434f-b05a-676f9187d384.JPG" width="400px">
 
+## rtic_blink
+Use the RTIC framework to schedule the blinking of the onboard LED using tasks and interrupts. 
