@@ -9,13 +9,16 @@ mod adc_read;
 mod adc_double_read;
 mod blink_w_speed_control;
 mod spi_dac;
+mod rtic_blink;
+// mod timer_blink;
 
 
-#[entry]
-fn main() -> ! {
-    // blink::start();
-    // adc_read::start();
-    // blink_w_speed_control::start();
-    // adc_double_read::start();
-    spi_dac::start();
-}
+// #[entry]
+// fn main() -> ! {
+//     // blink::start();
+//     // adc_read::start();
+//     // blink_w_speed_control::start();
+//     // adc_double_read::start();
+//     spi_dac::start();
+//     // timer_blink::app::init();
+// }
