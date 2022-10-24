@@ -9,7 +9,7 @@ mod adc_read;
 mod adc_double_read;
 mod blink_w_speed_control;
 mod spi_dac;
-mod rtic_blink;
+mod rtic_spi_dac;
 // mod timer_blink;
 
 
