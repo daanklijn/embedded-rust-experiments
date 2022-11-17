@@ -39,6 +39,6 @@ Outputing a saw wave using the MCP4922 DAC. Make sure that the VRef is wired, ot
 ## rtic_blink
 Use the RTIC framework to schedule the blinking of the onboard LED using tasks and interrupts. 
 
-## rtic_blink
+## rtic_spi_dac
 Use the RTIC framework to have a DAC output a triangle wave. Unfortunately it was not possible to reach a proper audio rate (44kHz+).
 
